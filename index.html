@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Oriflamme Links</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .section-container {
+            width: 30%;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0 1.5%;
+        }
+
+        #linkGroups {
+            order: 1; /* Move links to the left */
+        }
+
+        #counterContainer {
+            width: 30%;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0 1.5%;
+            order: 1; /* Move counter to the top */
+        }
+
+        #timerContainer {
+            width: 30%;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0 auto; /* Center the timer container horizontally */
+            order: 2; /* Move timer below counter */
+        }
+
+        .mute-container {
+            margin-top: 10px; /* Adjust the margin as needed */
+            text-align: center;
+        }
+
+        #muteButton {
+            font-size: 16px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        #muteIndicator {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        #counter {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        #timer {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #timerResetButton {
+            font-size: 16px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+    
+</head>
+<body>
+
+    <div class="section-container" id="instructions">
+        <h2>Instructions:</h2>
+        <p> There are groups of links, with 10 links in each. Roblox only allows 10 favorites per minute, meaning you must wait 60 seconds 
+            between the start of each group. <br><br>
+            Your favorite will register if there is a number next to the favorite button, if there
+            is no number and just the favorite star then it won't register. 
+        </p>
+        <h2>Counter:</h2>
+        <p>
+            The counter will keep track of each time a link is pressed, if you accidentally press a link too early then the counter will still go up. <br> 
+        </p>
+        <h2>Timer:</h2>
+        <p>
+            The timer restarts once a link is pressed and can only go up to 60 seconds. Once it
+            hits 60 seconds, it will play a beautiful sound. 
+        </p>
+    </div>
+
+    <div class="section-container" id="linkGroups">
+            <h1>Link Groups</h1>
+
+                <!-- Group 1 -->
+        <a href="#" id="group1" onclick="openGroup([
+            'https://www.roblox.com/catalog/15941142297/',
+            'https://www.roblox.com/catalog/15941144009/',
+            'https://www.roblox.com/catalog/15902713922/',
+            'https://www.roblox.com/catalog/15902718983/',
+            'https://www.roblox.com/catalog/15902311512/',
+            'https://www.roblox.com/catalog/15902318151/',
+            'https://www.roblox.com/catalog/15889332485/',
+            'https://www.roblox.com/catalog/15889334879/',
+            'https://www.roblox.com/catalog/15922876392/',
+            'https://www.roblox.com/catalog/15922913706/'
+        ])">Group 1</a>
+        <br>
+        <br>
+        <!-- Group 2 -->
+        <!-- <a href="#" id="group2" onclick="openGroup([
+            'https://www.roblox.com/catalog/15973916694/',
+            'https://www.roblox.com/catalog/15973920938/',
+            'https://www.roblox.com/catalog/15873373161/',
+            'https://www.roblox.com/catalog/15873366937/',
+            'https://www.roblox.com/catalog/15872898192/',
+            'https://www.roblox.com/catalog/15872907331/',
+            'https://www.roblox.com/catalog/15605332755/',
+            'https://www.roblox.com/catalog/15605331519/',
+            'https://www.roblox.com/catalog/14973960284/',
+            'https://www.roblox.com/catalog/14973959984/'
+        ])">Group 2</a>
+        <br>
+        <br> -->
+        <!-- Group 3 -->
+        <!-- <a href="#" id="group3" onclick="openGroup([
+            'https://www.roblox.com/catalog/14973940978/',
+            'https://www.roblox.com/catalog/14973942783/',
+            'https://www.roblox.com/catalog/14973914320/',
+            'https://www.roblox.com/catalog/14973914749/',
+            'https://www.roblox.com/catalog/14555617391/',
+            'https://www.roblox.com/catalog/14555618785/',
+            'https://www.roblox.com/catalog/14474364491/',
+            'https://www.roblox.com/catalog/14474364801/',
+            'https://www.roblox.com/catalog/14474278986/',
+            'https://www.roblox.com/catalog/14474287870/',
+        ])">Group 3</a>
+        <br>
+        <br> -->
+        <!-- Group 4 -->
+        <!-- <a href="#" id="group4" onclick="openGroup([
+            'https://www.roblox.com/catalog/14422979004/',
+            'https://www.roblox.com/catalog/14422982132/',
+            'https://www.roblox.com/catalog/14422816577/',
+            'https://www.roblox.com/catalog/14422813392/',
+            'https://www.roblox.com/catalog/14422784412/',
+            'https://www.roblox.com/catalog/14422775657/',
+            'https://www.roblox.com/catalog/14422755215/',
+            'https://www.roblox.com/catalog/14422681237/',
+            'https://www.roblox.com/catalog/14376871190/'
+        ])">Group 4</a>
+        <br>
+        <br> -->
+        <!-- Group 7 -->
+        <!-- <a href="#" id="group5" onclick="openGroup([
+            'https://www.roblox.com/catalog/16020176616/gojo',
+            'https://www.roblox.com/catalog/16020079537/baggy-jeans',
+            'https://www.roblox.com/catalog/16020075006/venezia',
+            'https://www.roblox.com/catalog/16020063311/gojo',
+            'https://www.roblox.com/catalog/16020054746/blue-exorcist-rin',
+            'https://www.roblox.com/catalog/16020052058/blue-exorcist-rin',
+            'https://www.roblox.com/catalog/16020042398/vlone-friends',
+            'https://www.roblox.com/catalog/16020038466/vlone-windbreaker',
+            'https://www.roblox.com/catalog/16020029923/black-cargo-pants',
+            'https://www.roblox.com/catalog/16020026267/khaki-cargo-pants'
+        ])">priority: Group 5</a>
+        <br>
+        <br> -->
+        <!-- Group 8 -->
+        <!-- <a href="#" id="group6" onclick="openGroup([
+            'https://www.roblox.com/catalog/16020021530/brown-cargo-pants',
+            'https://www.roblox.com/catalog/16020019755/green-cargo-pants',
+            'https://www.roblox.com/catalog/16020014555/black-denim-shorts',
+            'https://www.roblox.com/catalog/16020006209/jeans-with-white-shoes',
+            'https://www.roblox.com/catalog/16020002981/jeans-with-black-shoes',
+            'https://www.roblox.com/catalog/16015625912/sung-jihn-woo',
+            'https://www.roblox.com/catalog/15999560726/sung-jihn-woo',
+            'https://www.roblox.com/catalog/15999552504/sung-jihn-woo',
+            'https://www.roblox.com/catalog/16050337729/sung-jihn-woo',
+            'https://www.roblox.com/catalog/16050537717/sung-jihn-woo'
+        ])">priority: Group 6</a>
+        <br>
+        <br> -->
+        <!-- Group 9 -->
+        <!-- <a href="#" id="group7" onclick="openGroup([
+            'https://www.roblox.com/catalog/15990022141/sung-jihn-woo',
+            'https://www.roblox.com/catalog/15989949275/sung-jihn-woo',
+            'https://www.roblox.com/catalog/15989940955/sung-jihn-woo',
+            'https://www.roblox.com/catalog/15977975198/sung-jihn-woo',
+            'https://www.roblox.com/catalog/16030799353/sung-jihn-woo',
+            'https://www.roblox.com/catalog/16030805620/sung-jihn-woo',
+            'https://www.roblox.com/catalog/15887922662/lee-joohee-1',
+            'https://www.roblox.com/catalog/15887937271/lee-joohee-1',
+            'https://www.roblox.com/catalog/15889319606/',
+            'https://www.roblox.com/catalog/15889321646/'
+        ])">priority: Group 7</a> -->
+
+            <!-- ... Add other groups as needed -->
+
+            <hr> <!-- Horizontal line for separation -->
+        </div>
+
+        <div class="section-container" id="counterContainer">
+            <h1>Counter</h1>
+            <div id="counter">0</div>
+            <button onclick="decrement()">-</button>
+            <button onclick="reset()">Reset</button>
+            <button onclick="increment()">+</button>
+    
+            <!-- Timer Container moved inside Counter Container -->
+            <div class="timer-mute-container">
+                <!-- Timer Container -->
+                <div id="timerContainer">
+                    <h1>Timer</h1>
+                    <div id="timer">0 seconds</div>
+                    <button id="timerResetButton" onclick="resetTimer()">Reset Timer</button>
+                </div>
+        
+                <!-- Mute Container -->
+                <div class="mute-container">
+                    <button id="muteButton" onclick="toggleMute()">Mute</button>
+                    <div id="muteIndicator">Tavion Baker is turned ON</div>
+                </div>
+            </div>
+        </div>
+        
+
+    
+        <audio id="timerSound" src="tavion baker.mp3"></audio>
+
+    <script>
+        let counterValue = 0;
+        let timerValue = 0;
+        let timerInterval;
+
+        function updateCounter() {
+            document.getElementById('counter').textContent = counterValue;
+        }
+
+        function updateTimer() {
+            document.getElementById('timer').textContent = timerValue + ' seconds';
+
+            if (timerValue === 60) {
+                playTimerSound();
+                stopTimer();
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(function () {
+                timerValue++;
+                updateTimer();
+            }, 1000);
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            timerValue = 0;
+            updateTimer();
+        }
+
+        function playTimerSound() {
+            const timerSound = document.getElementById('timerSound');
+            timerSound.play();
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }   
+
+        function openGroup(links) {
+            resetTimer();
+            for (let i = 0; i < links.length; i++) {
+                window.open(links[i], '_blank');
+            }
+            increment();
+            startTimer();
+        }
+
+        function increment() {
+            counterValue++;
+            updateCounter();
+        }
+
+        function decrement() {
+            if (counterValue > 0) {
+                counterValue--;
+                updateCounter();
+            }
+        }
+
+        function reset() {
+            counterValue = 0;
+            updateCounter();
+        }
+        
+        let isMuted = false;
+
+        function toggleMute() {
+            const timerSound = document.getElementById('timerSound');
+            isMuted = !isMuted;
+
+            if (isMuted) {
+                timerSound.muted = true;
+                document.getElementById('muteIndicator').textContent = 'Tavion Baker is turned OFF';
+            } else {
+                timerSound.muted = false;
+                document.getElementById('muteIndicator').textContent = 'Tavion Baker is turned ON';
+            }
+        }
+    </script>
+
+</body>
+</html>
