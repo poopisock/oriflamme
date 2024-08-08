@@ -117,6 +117,7 @@
         <br>
         <br>
 
+        <!-- Group 2 -->
         <a href="#" id="group2" onclick="openGroup([
             'https://www.roblox.com/catalog/18856488827/lucci',
             'https://www.roblox.com/catalog/18856490032/lucci',
@@ -132,6 +133,7 @@
         <br>
         <br>
 
+        <!-- Group 3 -->
         <a href="#" id="group3" onclick="openGroup([
             'https://www.roblox.com/catalog/18863601765/gaku',
             'https://www.roblox.com/catalog/18863604560/gaku'
@@ -139,95 +141,35 @@
         <br>
         <br>
 
-        <!-- <a href="#" id="group4" onclick="openGroup([
-            'https://www.roblox.com/catalog/14422979004/',
-            'https://www.roblox.com/catalog/14422982132/',
-            'https://www.roblox.com/catalog/14422816577/',
-            'https://www.roblox.com/catalog/14422813392/',
-            'https://www.roblox.com/catalog/14422784412/',
-            'https://www.roblox.com/catalog/14422775657/',
-            'https://www.roblox.com/catalog/14422755215/',
-            'https://www.roblox.com/catalog/14422681237/',
-            'https://www.roblox.com/catalog/14376871190/'
-        ])">Group 4</a> -->
-        <br>
-        <br>
+    </div>
 
-        <!-- <a href="#" id="group5" onclick="openGroup([
-            'https://www.roblox.com/catalog/16020176616/gojo',
-            'https://www.roblox.com/catalog/16020079537/baggy-jeans',
-            'https://www.roblox.com/catalog/16020075006/venezia',
-            'https://www.roblox.com/catalog/16020063311/gojo',
-            'https://www.roblox.com/catalog/16020054746/blue-exorcist-rin',
-            'https://www.roblox.com/catalog/16020052058/blue-exorcist-rin',
-            'https://www.roblox.com/catalog/16020042398/vlone-friends',
-            'https://www.roblox.com/catalog/16020038466/vlone-windbreaker',
-            'https://www.roblox.com/catalog/16020029923/black-cargo-pants',
-            'https://www.roblox.com/catalog/16020026267/khaki-cargo-pants'
-        ])">Group 5</a> -->
-        <br>
-        <br>
-
-        <!-- <a href="#" id="group6" onclick="openGroup([
-            'https://www.roblox.com/catalog/16020021530/brown-cargo-pants',
-            'https://www.roblox.com/catalog/16020019755/green-cargo-pants',
-            'https://www.roblox.com/catalog/16020014555/black-denim-shorts',
-            'https://www.roblox.com/catalog/16020006209/jeans-with-white-shoes',
-            'https://www.roblox.com/catalog/16020002981/jeans-with-black-shoes',
-            'https://www.roblox.com/catalog/16015625912/sung-jihn-woo',
-            'https://www.roblox.com/catalog/15999560726/sung-jihn-woo',
-            'https://www.roblox.com/catalog/15999552504/sung-jihn-woo',
-            'https://www.roblox.com/catalog/16050337729/sung-jihn-woo',
-            'https://www.roblox.com/catalog/16050537717/sung-jihn-woo'
-        ])">Group 6</a> -->
-        <br>
-        <br>
-
-        <!-- <a href="#" id="group7" onclick="openGroup([
-            'https://www.roblox.com/catalog/15990022141/sung-jihn-woo',
-            'https://www.roblox.com/catalog/15989949275/sung-jihn-woo',
-            'https://www.roblox.com/catalog/15989940955/sung-jihn-woo',
-            'https://www.roblox.com/catalog/15977975198/sung-jihn-woo',
-            'https://www.roblox.com/catalog/16030799353/sung-jihn-woo',
-            'https://www.roblox.com/catalog/16030805620/sung-jihn-woo',
-            'https://www.roblox.com/catalog/15887922662/lee-joohee-1',
-            'https://www.roblox.com/catalog/15887937271/lee-joohee-1',
-            'https://www.roblox.com/catalog/15889319606/',
-            'https://www.roblox.com/catalog/15889321646/'
-        ])">Group 7</a> -->
-
-            <!-- ... Add other groups as needed -->
-
-            <hr> <!-- Horizontal line for separation -->
-        </div>
-
-        <div class="section-container" id="counterContainer">
-            <h1>Counter</h1>
-            <div id="counter">0</div>
-            <button onclick="decrement()">-</button>
-            <button onclick="reset()">Reset</button>
-            <button onclick="increment()">+</button>
+    <div class="section-container" id="counterContainer">
+        <h1>Counter</h1>
+        <div id="counter">0</div>
+        <button onclick="decrement()">-</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="increment()">+</button>
     
-            <!-- Timer Container moved inside Counter Container -->
-            <div class="timer-mute-container">
-                <!-- Timer Container -->
-                <div id="timerContainer">
-                    <h1>Timer</h1>
-                    <div id="timer">0 seconds</div>
-                    <button id="timerResetButton" onclick="resetTimer()">Reset Timer</button>
-                </div>
-        
-                <!-- Mute Container -->
-                <div class="mute-container">
-                    <button id="muteButton" onclick="toggleMute()">Mute</button>
-                    <div id="muteIndicator">Tavion Baker is turned ON</div>
-                </div>
+        <!-- Timer Container moved inside Counter Container -->
+        <div class="timer-mute-container">
+            <!-- Timer Container -->
+            <div id="timerContainer">
+                <h1>Timer</h1>
+                <div id="timer">0 seconds</div>
+                <button id="timerResetButton" onclick="resetTimer()">Reset Timer</button>
+            </div>
+    
+            <!-- Mute Container -->
+            <div class="mute-container">
+                <button id="muteButton" onclick="toggleMute()">Mute</button>
+                <div id="muteIndicator">Tavion Baker is turned ON</div>
             </div>
         </div>
+    </div>
         
 
     
-        <audio id="timerSound" src="tavion baker.mp3"></audio>
+    <audio id="timerSound" src="tavion baker.mp3"></audio>
 
     <script>
         let counterValue = 0;
