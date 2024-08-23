@@ -156,17 +156,17 @@
     </div>
 
     <div class="section-container" id="counterContainer">
-        <h1>Counter</h1>
+        <h1>COUNTER</h1>
         <div id="counter">0</div>
         <button onclick="decrement()">-</button>
-        <button onclick="reset()">Reset</button>
+        <button onclick="reset()">reset</button>
         <button onclick="increment()">+</button>
     
         <!-- Timer Container moved inside Counter Container -->
         <div class="timer-mute-container">
             <!-- Timer Container -->
             <div id="timerContainer">
-                <h1>Timer</h1>
+                <h1>TIMER</h1>
                 <div id="timer">0 seconds</div>
                 <button id="timerResetButton" onclick="resetTimer()">reset timer</button>
             </div>
@@ -181,7 +181,7 @@
         
 
     
-    <audio id="timerSound" src="tavion baker.mp3"></audio>
+    <audio id="timerSound" src="beep.mp3"></audio>
 
     <script>
         let counterValue = 0;
@@ -257,10 +257,10 @@
 
             if (isMuted) {
                 timerSound.muted = true;
-                document.getElementById('muteIndicator').textContent = 'Tavion Baker is turned OFF';
+                document.getElementById('muteIndicator').textContent = 'sound is turned OFF';
             } else {
                 timerSound.muted = false;
-                document.getElementById('muteIndicator').textContent = 'Tavion Baker is turned ON';
+                document.getElementById('muteIndicator').textContent = 'sound Baker is turned ON';
             }
         }
     </script>
