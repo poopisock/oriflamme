@@ -174,7 +174,7 @@
             <!-- Mute Container -->
             <div class="mute-container">
                 <button id="muteButton" onclick="toggleMute()">mute</button>
-                <div id="muteIndicator">sound is turned ON</div>
+                <div id="muteIndicator">beep is turned ON</div>
             </div>
         </div>
     </div>
@@ -257,10 +257,10 @@
 
             if (isMuted) {
                 timerSound.muted = true;
-                document.getElementById('muteIndicator').textContent = 'sound is turned OFF';
+                document.getElementById('muteIndicator').textContent = 'beep is turned OFF';
             } else {
                 timerSound.muted = false;
-                document.getElementById('muteIndicator').textContent = 'sound Baker is turned ON';
+                document.getElementById('muteIndicator').textContent = 'beep is turned ON';
             }
         }
     </script>
